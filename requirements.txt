@@ -1,0 +1,7 @@
+openpyxl
+pandas
+numpy
+xlrd
+PyQt5
+pyfiglet==0.7
+click
