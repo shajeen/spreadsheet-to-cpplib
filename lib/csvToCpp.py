@@ -2,9 +2,20 @@ import sys
 import os
 import shutil
 from string import Template
-from lib import xlsmToCpp
+from lib import fileOperations
 
 template_header = """
+// automatic generated file
+
+/*
+ ******************************************************************
+ *           C++ Spreadsheet-to-libcpp Library                    *
+ *                                                                *
+ * Convert XLSM, CSV to C++ library project.                      *
+ * URL: https://github.com/CodeAvailable/spreadsheet-to-cpplib    *
+ ******************************************************************
+*/
+
  # pragma once
  # include <string>
 
@@ -32,5 +43,5 @@ def csvtoheader(filename):
     if os.path.exists('output'):
         shutil.rmtree('output')
     os.makedirs('output')
-    xlsmToCpp.write_to_file(code, outputFile)
-    xlsmToCpp.run_code_formatter(outputFile)
+    fileOperations.write_to_file(code, outputFile)
+    fileOperations.run_code_formatter(outputFile)

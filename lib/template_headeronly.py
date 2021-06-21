@@ -1,6 +1,17 @@
 import sys
 
 template_header = """
+// automatic generated file
+
+/*
+ ******************************************************************
+ *           C++ Spreadsheet-to-libcpp Library                    *
+ *                                                                *
+ * Convert XLSM, CSV to C++ library project.                      *
+ * URL: https://github.com/CodeAvailable/spreadsheet-to-cpplib    *
+ ******************************************************************
+*/
+
  #pragma once
  #include <vector>
  #include <string>

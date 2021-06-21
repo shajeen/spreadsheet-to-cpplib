@@ -31,13 +31,13 @@ def get_the_data_from_sheet(sheet_name, forceDouble, eliminateString):
     sheet_ranges = workbook[sheet_name]
     var_fun = ''
 
-    if eliminateString.isChecked() == True and forceDouble.isChecked() == True:
+    if eliminateString == True and forceDouble == True:
         var_name = 'std::vector<std::vector<double>> {p1}_array'.format(p1=sheet_name) + '\n{'
     else:
         var_name = 'std::array<std::array<std::any,{p1}>,{p2}> {p3}_array'.format(p1=sheet_ranges.max_column, p2=sheet_ranges.max_row, p3=sheet_name) + '\n{'
         var_fun = 'std::array<std::any,{p1}>'.format(p1=sheet_ranges.max_column)
 
-    if forceDouble.isChecked() == True:
+    if forceDouble == True:
         wb = load_workbook(filename=file, data_only=True)
         sheet_ranges = wb[sheet_name]
 
@@ -52,8 +52,8 @@ def get_the_data_from_sheet(sheet_name, forceDouble, eliminateString):
                 dat = dat.replace('//','\/\/')
                 dat = dat.replace('"','\\"')
                 dat = dat.replace('\n','')
-                if eliminateString.isChecked() == True:
-                    if '=' in dat and forceDouble.isChecked() == False:
+                if eliminateString == True:
+                    if '=' in dat and forceDouble == False:
                         excel = excel + "\"" + dat + '\",'
                     else:
                         excel = excel + str(0.0) + ","
