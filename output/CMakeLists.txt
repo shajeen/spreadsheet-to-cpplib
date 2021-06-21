@@ -1,6 +1,4 @@
-import sys
-
-template_cmake = """ 
+ 
 # automatic generated file
 
 #
@@ -28,4 +26,3 @@ endif()
 
 file(GLOB_RECURSE source src/*)
 add_library(${PROJECT_NAME} SHARED ${source})
-"""

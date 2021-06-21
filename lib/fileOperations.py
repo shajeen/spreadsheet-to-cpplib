@@ -22,19 +22,13 @@ def run_code_formatter(filename):
     app = ''
     style = '--style=gnu'
 
-    if platform == 'linux':
-        app = 'bin/linux/astyle'
-        style = '--indent=spaces=4 --style=gnu --delete-empty-lines'
-        app = os.path.join('bin', 'linux')
-        app = os.path.join(app, 'astyle')
-    else:
+    if platform != 'linux':
         app = os.path.join('bin', 'windows')
         app = os.path.join(app, 'AStyle.exe')
         filename = filename.replace('output/', '')
         filename = os.path.join('output', filename)
-
-    os.system('{p1} {p2} {p3}'.format(p1=app, p2=style, p3=filename))
-    os.remove('{p1}.orig'.format(p1=filename))
+        os.system('{p1} {p2} {p3}'.format(p1=app, p2=style, p3=filename))
+        os.remove('{p1}.orig'.format(p1=filename))
 
 
 def copy_math_lib():
@@ -155,6 +149,9 @@ def process_xlsm_file(file_name):
         filename_local = 'output/{p1}'.format(p1=name)
         write_to_file(code_, filename_local)
         run_code_formatter(filename_local)
+        click.echo("-> written: {0}".format(filename_local))
+    
+    click.echo("Done !, Please check output folder.")
 
 
 def process_csv_file(file_name):
