@@ -2,7 +2,8 @@
 Convert XLSM, CSV to C++ library project.
 
 ### How it works
-```
+
+```bash
 (venv) PS E:\github\personal\spreadsheet-to-cpplib> python .\spreadsheet-to-cpplib.py --file="sample/sample1.xlsm"
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |S|p|r|e|a|d|S|h|e|e|t|-|t|o|-|c|p|p|l|i|b|
