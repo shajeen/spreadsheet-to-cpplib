@@ -8,7 +8,7 @@ template_header = """
  *           C++ Spreadsheet-to-libcpp Library                    *
  *                                                                *
  * Convert XLSM, CSV to C++ library project.                      *
- * URL: https://github.com/CodeAvailable/spreadsheet-to-cpplib    *
+ * URL: https://github.com/shajeen/spreadsheet-to-cpplib          *
  ******************************************************************
 */
 
