@@ -64,11 +64,11 @@ spreadsheet-to-cpplib --file="Download-Sample-File.csv"
 <div class="faq-entry">
   <div class="faq-entry-question"><b>Q::(1) Do you want Mathametical Expression library support for formula calculation ?</b></div>
   <div class="faq-entry-answer">:      If you want C++ Mathematical Expression Toolkit header only library. Then please answer **yes** else **no**.</p></div>
-  <div class="faq-entry-question">Q::(2) Configure as header-only library ?</div>
+  <div class="faq-entry-question"><b>Q::(2) Configure as header-only library ?</b></div>
   <div class="faq-entry-answer">:      If you want generated output as header-only. Then please answer **yes** else **no**.</p></div>
-  <div class="faq-entry-question">Q::(3) Get default value from formula as double.?</div>
+  <div class="faq-entry-question"><b>Q::(3) Get default value from formula as double.?</b></div>
   <div class="faq-entry-answer">:      If you want Formaul to be present as string in generated output. Then please answer **yes** else **no**.</p></div>
-  <div class="faq-entry-question">Q::(4) Make string as 0.0?</div>
+  <div class="faq-entry-question"><b>Q::(4) Make string as 0.0?</b></div>
   <div class="faq-entry-answer">:      If you want any string as zero in generated output. Then please answer **yes** else **no**.</p></div>
 </div>
 
