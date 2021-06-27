@@ -23,7 +23,7 @@
 
 
 ## About The Project
-![Capture](https://user-images.githubusercontent.com/2623563/123515913-108d7f80-d6b7-11eb-87ea-3a5d9b6d6e2b.PNG)
+![1](https://user-images.githubusercontent.com/2623563/123547683-5a419d00-d77f-11eb-851d-cb4af8273df9.PNG)
 
 There are many great tools available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a tool which make me a CMake lib and also it does compiles.
 
@@ -34,20 +34,29 @@ To get a local copy up and running follow these steps.
 
 ### Installation
 
- Clone the repo
+ Install from the git repo
    ```sh
-   git clone https://github.com/shajeen/spreadsheet-to-cpplib.git
+   pip install https://github.com/shajeen/spreadsheet-to-cpplib.git
    ```
-   
-The requirements.txt file should list all Python libraries that project depend on, and they will be installed using
-
-  ```sh
-  pip install -r requirements.txt
-  ```
+ 
+ Install from pypi
+   ```sh
+   pip install spreadSheet-to-cpplib
+   ```
   
 ### How it works
 
 Just pass file name as input argument, and tool will be promoting couple of question. Just answer **yes** or **no**, rest script take care everything. You may find generated files in output folder.
+
+**example of xlsm**
+```sh
+spreadsheet-to-cpplib --file="Download-Sample-File-xlsm.xlsm"
+```
+
+**example of csv**
+```sh
+spreadsheet-to-cpplib --file="Download-Sample-File.csv"
+```
 
 #### Question that tool promots:
 
@@ -63,7 +72,7 @@ Just pass file name as input argument, and tool will be promoting couple of ques
 </div>
 
 ## Working Screenshot
-![Capture2](https://user-images.githubusercontent.com/2623563/123516766-59473780-d6bb-11eb-8115-b63124f33296.PNG)
+![2](https://user-images.githubusercontent.com/2623563/123547680-59107000-d77f-11eb-8cb1-d05e8e8b9932.PNG)
 
 ## Roadmap
 

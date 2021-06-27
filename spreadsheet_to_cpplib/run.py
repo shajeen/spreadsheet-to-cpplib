@@ -1,6 +1,6 @@
 import click
-from cli import clitest
-from lib import fileOperations
+from . import clitest
+from . import fileOperations
 
 @click.command()
 @click.option('--test', help='print random text for testing.')

@@ -1,5 +1,5 @@
-from render import asciitext as asText
-from cli import run as argumet
+from . import asciitext as asText
+from . import run as argumet
 
 def main():
     asText.printText("SpreadSheet-to-cpplib")

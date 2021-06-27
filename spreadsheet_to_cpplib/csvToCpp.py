@@ -2,7 +2,8 @@ import sys
 import os
 import shutil
 from string import Template
-from lib import fileOperations
+from . import fileOperations
+import click
 
 template_header = """
 // automatic generated file
@@ -16,8 +17,9 @@ template_header = """
  ******************************************************************
 */
 
- # pragma once
- # include <string>
+ #pragma once
+ #include <string>
+ #include <vector>
 
  namespace $t_namespace_h1
  {
@@ -28,20 +30,23 @@ template_header = """
 
 def csvtoheader(filename):
     content = ''
+    click.echo("""file inputed: {0}""".format(filename))
+    click.echo("""file processing: {0}""".format(filename))
     with open(filename, 'r') as file:
-        Lines = file.readline()
-        while Lines:
-            Lines.replace("\n","")
-            content = content + "\"," + Lines.strip() + "\"\n"
-            Lines = file.readline()
+       lis = [line.replace(',',' , ').replace(',',' ').split() for line in file]
+       for i, x in enumerate(lis):
+           content = content + "{0},".format(x)
+    content = content[:-1]
     t_file = os.path.splitext(os.path.basename(filename))[0]
     t_file = t_file.replace(".", "_")
+    content = """std::vector<std::vector<std::string>> csv = [{0}];""".format(content)
+    content = content.replace("[","{").replace("]","}").replace('\'',"\"")
     code = Template(template_header)
     code = code.substitute(t_namespace_h1="CSV_"+t_file,
-                           t_code=" std::string " + t_file + " = " + content + ";")
+                           t_code=content)
     outputFile = 'output/{p1}'.format(p1=t_file+".h")
     if os.path.exists('output'):
         shutil.rmtree('output')
     os.makedirs('output')
     fileOperations.write_to_file(code, outputFile)
-    fileOperations.run_code_formatter(outputFile)
+    click.echo("Done!. please check the output folder.")
