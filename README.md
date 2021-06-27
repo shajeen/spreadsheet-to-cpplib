@@ -39,10 +39,11 @@ To get a local copy up and running follow these steps.
    pip install https://github.com/shajeen/spreadsheet-to-cpplib.git
    ```
  
- Install from pypi
+ Install from pypi 
    ```sh
    pip install spreadSheet-to-cpplib
    ```
+   more information at https://pypi.org/project/spreadSheet-to-cpplib/
   
 ### How it works
 
