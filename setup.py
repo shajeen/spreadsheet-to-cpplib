@@ -1,7 +1,7 @@
 from setuptools import setup, Extension
 import os
 
-with open("long_desc.md", 'r') as f:
+with open("README.md", 'r') as f:
     long_description = f.read()
 
 DESCRIPTION = "Convert XLSM CSV to Cpp library project"
@@ -9,8 +9,9 @@ DESCRIPTION = "Convert XLSM CSV to Cpp library project"
 # Remove this whole block from here...
 setup(
         name='spreadSheet-to-cpplib',
-        version='0.1.1',
+        version='1.0.0',
         description=DESCRIPTION,
+        long_description_content_type="text/markdown",
         author='Sheik S Shajeen Ahamed',
         author_email='shajeenahmed@gmail.com',
         license="GPL-3.0",
@@ -37,5 +38,7 @@ setup(
                     'spreadsheet-to-cpplib=spreadsheet_to_cpplib.main:main',
                 ],
         },
-        long_description=long_description
+        long_description=long_description,
+        include_package_data=True,
+        package_data={'': ['lib/*.hpp']}
 )

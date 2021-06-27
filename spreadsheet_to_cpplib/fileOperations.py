@@ -2,26 +2,28 @@ import os.path
 from string import Template
 import os
 from sys import platform
+from pathlib import Path
 
 import click
 import shutil
 import time
 
-from lib import parse
-from lib import template_headeronly
-from lib import template_math
-from lib import template_source
-from lib import csvToCpp
-from lib import template_cmake
+from . import parse
+from . import template_headeronly
+from . import template_math
+from . import template_source
+from . import csvToCpp
+from . import template_cmake
 
 status = '<h2>[Done]: check output folder.</h2>'
 list_checkbox = []
 
 def copy_math_lib():
-    this_dir, this_filename = os.path.split(__file__)
-    DATA_PATH = os.path.join(this_dir, "libcpp", "exprtk.hpp")
-    shutil.copy(DATA_PATH, 'output/src/exprtk.hpp')
-
+    here = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(here, "lib", "exprtk.hpp"), "rb") as f:
+        data = f.read()
+    write_to_file(data.decode("utf-8"),"output/src/exprtk.hpp")
+    click.echo('-> Written: output/src/exprtk.hpp')
 
 def write_to_file(data, filename):
     file = open(filename, 'w+')
@@ -131,8 +133,9 @@ def process_xlsm_file(file_name):
         code_list.append(code)
         filename_list.append("src/{0}".format(filename_cpp))
 
-    code_list.append(template_cmake.template_cmake)
-    filename_list.append("CMakeLists.txt")
+    if ques2 != True:
+        code_list.append(template_cmake.template_cmake)
+        filename_list.append("CMakeLists.txt")
     for name, code_ in zip(filename_list, code_list):
         filename_local = 'output/{p1}'.format(p1=name)
         write_to_file(code_, filename_local)

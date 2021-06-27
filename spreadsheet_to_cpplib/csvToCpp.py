@@ -2,7 +2,7 @@ import sys
 import os
 import shutil
 from string import Template
-from lib import fileOperations
+from . import fileOperations
 import click
 
 template_header = """
@@ -33,7 +33,7 @@ def csvtoheader(filename):
     click.echo("""file inputed: {0}""".format(filename))
     click.echo("""file processing: {0}""".format(filename))
     with open(filename, 'r') as file:
-       lis = [line.split() for line in file]
+       lis = [line.replace(',',' , ').replace(',',' ').split() for line in file]
        for i, x in enumerate(lis):
            content = content + "{0},".format(x)
     content = content[:-1]
