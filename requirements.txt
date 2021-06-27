@@ -1,6 +1,0 @@
-openpyxl
-pandas
-numpy
-xlrd
-pyfiglet==0.7
-click

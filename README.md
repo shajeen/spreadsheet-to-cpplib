@@ -34,16 +34,15 @@ To get a local copy up and running follow these steps.
 
 ### Installation
 
- Clone the repo
+ Install from the git repo
    ```sh
-   git clone https://github.com/shajeen/spreadsheet-to-cpplib.git
+   pip install https://github.com/shajeen/spreadsheet-to-cpplib.git
    ```
-   
-The requirements.txt file should list all Python libraries that project depend on, and they will be installed using
-
-  ```sh
-  pip install -r requirements.txt
-  ```
+ 
+ Install from pypi
+   ```sh
+   pip install spreadSheet-to-cpplib
+   ```
   
 ### How it works
 

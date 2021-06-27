@@ -1,18 +1,20 @@
-from setuptools import setup
+from setuptools import setup, Extension
 import os
 
-with open('requirements.txt') as f:
-    required = f.read().splitlines()
+#with open('requirements.txt') as f:
+#    required = f.read().splitlines()
 
 # Used in pypi.org as the README description of your package
-with open("README.md", 'r') as f:
+with open("long_desc.md", 'r') as f:
     long_description = f.read()
+
+DESCRIPTION = "Convert XLSM CSV to Cpp library project"
 
 # Remove this whole block from here...
 setup(
         name='spreadSheet-to-cpplib',
-        version='0.2v',
-        description='Convert XLSM, CSV to C++ library project.',
+        version='0.1',
+        description=DESCRIPTION,
         author='Sheik S Shajeen Ahamed',
         author_email='shajeenahmed@gmail.com',
         license="GPL-3.0",
@@ -22,10 +24,17 @@ setup(
         },
         classifiers=[
             "Programming Language :: Python :: 3",
-            "License :: OSI Approved :: GPL-3.0 License",
+            "License :: OSI Approved :: MIT License",
             "Operating System :: OS Independent",
         ],
-        install_requires=required,
+        install_requires=[
+            'openpyxl',
+            'pandas',
+            'numpy',
+            'xlrd',
+            'pyfiglet',
+            'click'
+        ],
         packages=['spreadsheet_to_cpplib'],
         entry_points={
                 'console_scripts': [
