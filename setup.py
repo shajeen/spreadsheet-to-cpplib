@@ -1,10 +1,6 @@
 from setuptools import setup, Extension
 import os
 
-#with open('requirements.txt') as f:
-#    required = f.read().splitlines()
-
-# Used in pypi.org as the README description of your package
 with open("long_desc.md", 'r') as f:
     long_description = f.read()
 
@@ -13,7 +9,7 @@ DESCRIPTION = "Convert XLSM CSV to Cpp library project"
 # Remove this whole block from here...
 setup(
         name='spreadSheet-to-cpplib',
-        version='0.1',
+        version='0.1.1',
         description=DESCRIPTION,
         author='Sheik S Shajeen Ahamed',
         author_email='shajeenahmed@gmail.com',
