@@ -142,4 +142,5 @@ def process_xlsm_file(file_name):
 
 
 def process_csv_file(file_name):
-    pass
+    click.echo("CSV processing")
+    csvToCpp.csvtoheader(file_name)
