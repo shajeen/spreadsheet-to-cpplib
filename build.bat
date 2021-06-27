@@ -1,1 +1,0 @@
-pyinstaller.exe -F --add-data "venv\Lib\site-packages\pyfiglet;./pyfiglet" .\spreadsheet-to-cpplib.py

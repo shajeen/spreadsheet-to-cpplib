@@ -32,7 +32,9 @@ def run_code_formatter(filename):
 
 
 def copy_math_lib():
-    shutil.copy('libcpp/exprtk.hpp', 'output/src/exprtk.hpp')
+    this_dir, this_filename = os.path.split(__file__)
+    DATA_PATH = os.path.join(this_dir, "libcpp", "exprtk.hpp")
+    shutil.copy(DATA_PATH, 'output/src/exprtk.hpp')
 
 
 def write_to_file(data, filename):
@@ -148,7 +150,7 @@ def process_xlsm_file(file_name):
     for name, code_ in zip(filename_list, code_list):
         filename_local = 'output/{p1}'.format(p1=name)
         write_to_file(code_, filename_local)
-        run_code_formatter(filename_local)
+        #run_code_formatter(filename_local) disable as linux does not work
         click.echo("-> written: {0}".format(filename_local))
     
     click.echo("Done !, Please check output folder.")
