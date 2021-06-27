@@ -17,20 +17,6 @@ from lib import template_cmake
 status = '<h2>[Done]: check output folder.</h2>'
 list_checkbox = []
 
-
-def run_code_formatter(filename):
-    app = ''
-    style = '--style=gnu'
-
-    if platform != 'linux':
-        app = os.path.join('bin', 'windows')
-        app = os.path.join(app, 'AStyle.exe')
-        filename = filename.replace('output/', '')
-        filename = os.path.join('output', filename)
-        os.system('{p1} {p2} {p3}'.format(p1=app, p2=style, p3=filename))
-        os.remove('{p1}.orig'.format(p1=filename))
-
-
 def copy_math_lib():
     this_dir, this_filename = os.path.split(__file__)
     DATA_PATH = os.path.join(this_dir, "libcpp", "exprtk.hpp")
@@ -150,7 +136,6 @@ def process_xlsm_file(file_name):
     for name, code_ in zip(filename_list, code_list):
         filename_local = 'output/{p1}'.format(p1=name)
         write_to_file(code_, filename_local)
-        #run_code_formatter(filename_local) disable as linux does not work
         click.echo("-> written: {0}".format(filename_local))
     
     click.echo("Done !, Please check output folder.")
