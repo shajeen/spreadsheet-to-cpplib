@@ -17,6 +17,14 @@ setup(
         author_email='shajeenahmed@gmail.com',
         license="GPL-3.0",
         url="https://github.com/shajeen/spreadsheet-to-cpplib",
+        project_urls={
+            "Bug Tracker": "https://github.com/shajeen/spreadsheet-to-cpplib/issues",
+        },
+        classifiers=[
+            "Programming Language :: Python :: 3",
+            "License :: OSI Approved :: GPL-3.0 License",
+            "Operating System :: OS Independent",
+        ],
         install_requires=required,
         packages=['spreadsheet_to_cpplib'],
         entry_points={
