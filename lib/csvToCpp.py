@@ -17,8 +17,9 @@ template_header = """
  ******************************************************************
 */
 
- # pragma once
- # include <string>
+ #pragma once
+ #include <string>
+ #include <vector>
 
  namespace $t_namespace_h1
  {
