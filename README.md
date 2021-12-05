@@ -1,14 +1,6 @@
-<!-- ![spread](https://user-images.githubusercontent.com/2623563/123515225-0f0e8800-d6b4-11eb-99e9-d01b6685e2a8.png) -->
-
+![Reference (6)](https://user-images.githubusercontent.com/2623563/144738477-05d94852-2b84-47c2-b98a-be220731e0a6.png)
 <!-- PROJECT LOGO -->
 <br />
-<p align="center">
-  <a href="https://github.com/shajeen/spreadsheet-to-cpplib/blob/main/README.md">
-    <img src="https://user-images.githubusercontent.com/2623563/123515225-0f0e8800-d6b4-11eb-99e9-d01b6685e2a8.png" alt="Logo" width="640" height="320">
-  </a>
-
-  <h3 align="center">SpreadSheet-to-cpplib</h3>
-
   <p align="center">
     An awesome tool to help in your projects!
     <br />
@@ -19,8 +11,6 @@
     ·
     <a href="https://github.com/shajeen/spreadsheet-to-cpplib/issues/new?assignees=shajeen&labels=enhancement&template=feature_request.md&title=">Request Feature</a>
   </p>
-</p>
-
 
 ## About The Project
 ![1](https://user-images.githubusercontent.com/2623563/123547683-5a419d00-d77f-11eb-851d-cb4af8273df9.PNG)
