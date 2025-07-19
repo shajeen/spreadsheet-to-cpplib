@@ -32,10 +32,10 @@ setup(
             'pyfiglet',
             'click'
         ],
-        packages=['spreadsheet_to_cpplib'],
+        packages=['src.spreadsheet_to_cpplib'],
         entry_points={
                 'console_scripts': [
-                    'spreadsheet-to-cpplib=spreadsheet_to_cpplib.main:main',
+                    'spreadsheet-to-cpplib=src.spreadsheet_to_cpplib.main:main',
                 ],
         },
         long_description=long_description,

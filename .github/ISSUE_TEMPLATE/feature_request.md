@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
+title: '[FEATURE] '
 labels: enhancement
 assignees: shajeen
 
@@ -16,5 +16,11 @@ A clear and concise description of what you want to happen.
 **Describe alternatives you've considered**
 A clear and concise description of any alternative solutions or features you've considered.
 
+**Use case**
+Describe the specific use case or scenario where this feature would be helpful.
+
 **Additional context**
-Add any other context or screenshots about the feature request here.
+Add any other context, screenshots, or examples about the feature request here.
+
+**Implementation suggestions**
+If you have ideas about how this could be implemented, please share them here.
