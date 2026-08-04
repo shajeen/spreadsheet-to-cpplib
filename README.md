@@ -1,12 +1,11 @@
 # Spreadsheet to C++ Library
 
+[![CI](https://github.com/shajeen/spreadsheet-to-cpplib/actions/workflows/ci.yml/badge.svg)](https://github.com/shajeen/spreadsheet-to-cpplib/actions/workflows/ci.yml)
 [![PyPI version](https://badge.fury.io/py/spreadsheet-to-cpplib.svg)](https://badge.fury.io/py/spreadsheet-to-cpplib)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-A powerful Python tool that converts spreadsheets (XLSM, CSV) into C++ library projects with full CMake support. Transform your spreadsheet calculations into high-performance C++ code with mathematical expression support.
-
-![Tool Demo](https://user-images.githubusercontent.com/2623563/123547683-5a419d00-d77f-11eb-851d-cb4af8273df9.PNG)
+Convert spreadsheets (XLSM, CSV) into CMake-ready C++ library projects with mathematical expression support. Published on PyPI.
 
 ## ✨ Features
 
